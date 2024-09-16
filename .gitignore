@@ -1,8 +1,98 @@
-#ignore everything
-*
+# Ignore build directories
+/build/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
 
-#unignore what we want to track
-!*.cpp
-!*.h
-!.gitignore
-!README.md
+# Ignore compiled object files
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.libs
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Ignore generated files
+*.log
+*.out
+*.a
+*.lib
+*.pdb
+*.ilk
+*.idb
+*.DS_Store
+
+# Ignore Visual Studio files
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.ncb
+*.user
+*.cache
+*.pdb
+*.ipch
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*.orig
+*.tlog
+*.lastbuildstate
+*.obj
+*.idb
+*.ipdb
+*.iobj
+*.log
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# Ignore Python virtual environment
+/venv/
+/env/
+
+# Ignore SQLite database files
+*.db
+*.sqlite
+
+# Ignore assets
+/assets/*.png
+/assets/*.jpg
+/assets/*.jpeg
+/assets/*.bmp
+/assets/*.tga
+/assets/*.psd
+/assets/*.obj
+/assets/*.fbx
+/assets/*.mtl
+
+# Ignore other temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.old
+*.orig
+*.rej
+*.log
+*.gz
+*.zip
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+
+# Ignore Key
+*/TrafficSimulationKey
+*/TrafficSimulationKey.pub
