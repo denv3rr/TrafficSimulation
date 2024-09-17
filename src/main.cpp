@@ -1,7 +1,12 @@
 // main.cpp - main project entrypoint
+
+// Standard, etc.
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+
+// Local (headers)
+#include "Vehicle.h"
 
 int main()
 {
@@ -33,6 +38,8 @@ int main()
         std::cerr << "Failed to initialize GLEW" << std::endl;
         return -1;
     }
+
+    Vehicle vehicle(100.0f, 100.0f);
 
     // Scene rendering
     while (!glfwWindowShouldClose(window))

@@ -9,8 +9,9 @@ link_directories(lib)
 
 # Add source files
 file(GLOB SOURCES "src/*.cpp")
+file(GLOB HEADERS "include/*.h")
 
-add_executable(TrafficSimulation ${SOURCES})
+add_executable(TrafficSimulation ${SOURCES} ${HEADERS})
 
 # Link GLFW
 target_link_libraries(TrafficSimulation glfw3 glew32 opengl32)
