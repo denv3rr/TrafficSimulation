@@ -13,4 +13,4 @@ file(GLOB SOURCES "src/*.cpp")
 add_executable(TrafficSimulation ${SOURCES})
 
 # Link GLFW
-target_link_libraries(TrafficSimulation glfw3)
+target_link_libraries(TrafficSimulation glfw3 glew32 opengl132)
