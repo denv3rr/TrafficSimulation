@@ -35,7 +35,7 @@ int main()
     }
 
     // Error catch for inability to load GLFW window
-    GLFWwindow *window = glfwCreateWindow(800, 600, "Traffic Simulation", nullptr, nullptr);
+    GLFWwindow *window = glfwCreateWindow(800, 600, "Traffic Simulation", NULL, NULL);
     if (!window)
     {
         std::cerr << "Failed to create GLFW window" << std::endl;
@@ -52,6 +52,15 @@ int main()
         return -1;
     }
 
+    glViewport(0, 0, 800, 600);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(0, 800, 0, 600, -1, 1);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // Set clear color
+
     TrafficSimulation simulation;
 
     // Scene rendering
@@ -63,6 +72,8 @@ int main()
         float deltaTime = 0.016f; // Assumes a fixed time step here
         simulation.update(deltaTime);
         simulation.render();
+
+        checkGLError(); // Check for errors in OpenGL
 
         glfwSwapBuffers(window);
         glfwPollEvents();

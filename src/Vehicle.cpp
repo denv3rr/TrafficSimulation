@@ -3,7 +3,7 @@
 #include <GL/glew.h>
 #include <iostream>
 
-Vehicle::Vehicle(float x, float y) : x(x), y(y), width(10.0f), height(20.0f), speed(50.0f) {}
+Vehicle::Vehicle(float x, float y) : x(x), y(y), width(50.0f), height(100.0f), speed(50.0f) {}
 
 void Vehicle::update(float deltaTime)
 {
