@@ -7,10 +7,12 @@
 
 // Local (headers)
 #include "Vehicle.h"
+#include "TrafficSimulation.h"
 
 int main()
 {
     /******************************************
+     * **MAIN FUNCTION**
      * Loads GLFW, GLFW window, GLEW, then renders.
      *******************************************/
 
@@ -39,7 +41,7 @@ int main()
         return -1;
     }
 
-    Vehicle vehicle(100.0f, 100.0f);
+    TrafficSimulation simulation;
 
     // Scene rendering
     while (!glfwWindowShouldClose(window))
@@ -47,6 +49,9 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         // *** RENDER SCENE ***
+        float deltaTime = 0.016f; // Assumes a fixed time step here
+        simulation.update(deltaTime);
+        simulation.render();
 
         glfwSwapBuffers(window);
         glfwPollEvents();

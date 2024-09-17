@@ -18,9 +18,9 @@ void Vehicle::render()
      * Renders the vehicle as a simple rectangle first
      *******************************************/
     glBegin(GL_QUADS);
-    glVertex2f(x - 5.0f, y - 5.0f);
-    glVertex2f(x + 5.0f, y - 5.0f);
-    glVertex2f(x + 5.0f, y + 5.0f);
-    glVertex2f(x - 5.0f, y + 5.0f);
+    glVertex2f(x - width / 2, y - height / 2);
+    glVertex2f(x + width / 2, y - height / 2);
+    glVertex2f(x + width / 2, y + height / 2);
+    glVertex2f(x - width / 2, y + height / 2);
     glEnd();
 }

@@ -11,7 +11,6 @@ public:
     TrafficSimulation();
     void update(float deltaTime);
     void render();
-    void run();
 
 private:
     std::vector<Vehicle> vehicles;

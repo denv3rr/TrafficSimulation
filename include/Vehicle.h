@@ -10,8 +10,9 @@ public:
     void render();
 
 private:
-    float x, y;  // vehicle position
-    float speed; // vehicle speed
+    float x, y;          // vehicle position
+    float width, height; // Dimensions of vehicle
+    float speed;         // vehicle speed
 };
 
 #endif // VEHICLE_H

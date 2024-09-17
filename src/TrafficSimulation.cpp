@@ -5,7 +5,7 @@
 #include "TrafficSimulation.h"
 #include <iostream>
 
-void TrafficSimulation::run()
+TrafficSimulation::TrafficSimulation()
 {
     /******************************************
      * Runs traffic simulation logic
