@@ -94,9 +94,8 @@
 *.rar
 
 # Ignore Key
-/TrafficSimulation
-TrafficSimulationKey
-TrafficSimulationKey.pub
+Keys/TrafficSimulationKey
+Keys/TrafficSimulationKey.pub
 notes.txt
 
 #
