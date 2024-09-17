@@ -5,7 +5,13 @@
 class Vehicle
 {
 public:
-private:
-}
+    Vehicle(float x, float y);
+    void update(float deltaTime);
+    void render();
 
-#endif // !VEHICLE_H
+private:
+    float x, y;  // vehicle position
+    float speed; // vehicle speed
+};
+
+#endif // VEHICLE_H
