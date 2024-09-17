@@ -6,8 +6,19 @@
 #include <iostream>
 
 // Local (headers)
-#include "Vehicle.h"
 #include "TrafficSimulation.h"
+
+/******************************************
+ * Checks for any errors in OpenGL
+ *******************************************/
+void checkGLError()
+{
+    GLenum err;
+    while ((err = glGetError()) != GL_NO_ERROR)
+    {
+        std::cerr << "OpenGL error: " << err << std::endl;
+    }
+}
 
 int main()
 {
